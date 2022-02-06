@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>03 - Editing an bids</title>
+		<title>03 - Editing an Orders</title>
 		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
 
@@ -19,14 +19,14 @@
 	<body class="with-nav body--dashboard">
 		<nav class="project-nav">
 			<div class="project-nav__links-wrapper">
-				<a href="index.html">Form for adding bids</a>
-				<a href="table.html">Bids table</a>
-				<a href="edit.html">Editing an bids</a>
+				<a href="index.html">Form for adding Orders</a>
+				<a href="table.html">Orders table</a>
+				<a href="edit.html">Editing an Orders</a>
 			</div>
 		</nav>
 		<div class="left-panel blue-skin">
 			<div class="left-panel__logo">
-				<div class="left-panel__logo-title">CRM Bids</div>
+				<div class="left-panel__logo-title">CRM Orders</div>
 				<div class="left-panel__logo-subtitle">Educational project</div>
 			</div>
 			<div class="left-panel__user clearfix">
@@ -36,7 +36,7 @@
 				<div class="left-panel__user-name">Steven <br />Spielberg</div>
 			</div>
 			<div class="left-panel__navigation">
-				<div class="left-panel__navigation-title">Bids</div>
+				<div class="left-panel__navigation-title">Orders</div>
 				<ul>
 					<li>
 						<a href="/table.html" class="active" data-filters="all-status">
@@ -78,7 +78,7 @@
 			<div class="container-fluid">
 				<div class="row justify-content-between align-items-center">
 					<div class="col">
-						<div class="admin-heading-1">Working with an bid</div>
+						<div class="admin-heading-1">Working with an Order</div>
 					</div>
 					<div class="col text-right">
 						<a href="index.html" class="btn btn-link">Come back</a>
@@ -88,14 +88,14 @@
 					<div class="col">
 						<form action="">
 							<div class="card mb-4">
-								<div class="card-header">Bid data</div>
+								<div class="card-header">Order data</div>
 								<div class="card-body">
 									<div class="row mb-3">
 										<div class="col-md-2">
 											<strong>ID:</strong>
 										</div>
 										<div class="col" id="id-order">
-											Bid №
+											Order №
 											<span data-edit-id></span>
 										</div>
 									</div>
@@ -151,7 +151,7 @@
 
 									<div class="row mb-3">
 										<div class="col-md-2">
-											<strong>Bid status:</strong>
+											<strong>Order status:</strong>
 										</div>
 										<div class="col">
 											<select class="custom-select" id="status-order">
