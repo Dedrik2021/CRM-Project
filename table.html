@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>02 - Bids table</title>
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="with-nav body--dashboard">
+		<nav class="project-nav">
+			<div class="project-nav__links-wrapper">
+				<a href="index.html">Form for adding bids</a>
+				<a href="table.html">Bids table</a>
+				<a href="edit.html">Editing an bids</a>
+			</div>
+		</nav>
+		<div class="left-panel blue-skin">
+			<div class="left-panel__logo">
+				<div class="left-panel__logo-title">CRM Bids</div>
+				<div class="left-panel__logo-subtitle">Educational project</div>
+			</div>
+			<div class="left-panel__user clearfix">
+				<div class="left-panel__user-photo">
+					<img src="img/avatars/avatar-128.jpg" alt="Avatar" />
+				</div>
+				<div class="left-panel__user-name">Steven <br />Spielberg</div>
+			</div>
+			<div class="left-panel__navigation" data-navigation>
+				<div class="left-panel__navigation-title">Bids</div>
+				<ul>
+					<li>
+						<a href="#" class="active" data-filters="all">
+							All
+							<div class="badge" style="pointer-events: none" id="all-items">0</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-filters="New">
+							New
+							<span class="badge" id="new" style="pointer-events: none">0</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-filters="In work"> In work </a>
+					</li>
+					<li>
+						<a href="#" data-filters="Completed"> Completed </a>
+					</li>
+					<li>
+						<a href="#" data-filters="Archive"> Archive </a>
+					</li>
+				</ul>
+			</div>
+			<div class="left-panel__navigation">
+				<div class="left-panel__navigation-title">Products</div>
+				<ul>
+					<li><a href="#">Active</a></li>
+					<li><a href="#">Archive</a></li>
+				</ul>
+			</div>
+			<div class="left-panel__navigation left-panel__navigation--no-line">
+				<ul>
+					<li><a href="#">Exit</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-wrapper">
+			<div class="container-fluid">
+				<div class="admin-heading-1">All bids</div>
+				<form action="">
+					<div class="row mb-3 justify-content-start">
+						<div class="col">
+							<div class="btn-group" role="group" aria-label="...">
+								<a href="#" class="btn btn-light" data-filters="all">All</a>
+								<a href="#" class="btn btn-light" data-filters="New">New</a>
+								<a href="#" class="btn btn-light" data-filters="In work">In work</a>
+								<a href="#" class="btn btn-light" data-filters="Completed">Completed</a>
+								<a href="#" class="btn btn-light" data-filters="Archive">Archive</a>
+							</div>
+						</div>
+						<div class="col">
+							<select class="custom-select" id="filter-product">
+								<option selected value="all">All procucts</option>
+								<option value="HTML Course">HTML Course</option>
+								<option value="JavaScript Course">JavaScript Course</option>
+								<option value="VUE JS Course">VUE JS Course</option>
+								<option value="PHP Course">PHP Course</option>
+								<option value="WordPress Course">WordPress Course</option>
+							</select>
+						</div>
+					</div>
+				</form>
+
+				<table class="table fs-14">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Date</th>
+							<th>Product</th>
+							<th>Name</th>
+							<th>email</th>
+							<th>Phone</th>
+							<th>Status</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="table-list"></tbody>
+				</table>
+			</div>
+		</div>
+		<script src="./js/model.js"></script>
+
+		<script src="./js/table/table.view.js"></script>
+		<script src="./js/table/table.controller.js"></script>
+	</body>
+</html>

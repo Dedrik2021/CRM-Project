@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>03 - Editing an bids</title>
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic-ext"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="with-nav body--dashboard">
+		<nav class="project-nav">
+			<div class="project-nav__links-wrapper">
+				<a href="index.html">Form for adding bids</a>
+				<a href="table.html">Bids table</a>
+				<a href="edit.html">Editing an bids</a>
+			</div>
+		</nav>
+		<div class="left-panel blue-skin">
+			<div class="left-panel__logo">
+				<div class="left-panel__logo-title">CRM Bids</div>
+				<div class="left-panel__logo-subtitle">Educational project</div>
+			</div>
+			<div class="left-panel__user clearfix">
+				<div class="left-panel__user-photo">
+					<img src="img/avatars/avatar-128.jpg" alt="Avatar" />
+				</div>
+				<div class="left-panel__user-name">Steven <br />Spielberg</div>
+			</div>
+			<div class="left-panel__navigation">
+				<div class="left-panel__navigation-title">Bids</div>
+				<ul>
+					<li>
+						<a href="/table.html" class="active" data-filters="all-status">
+							All
+							<div class="badge" id="all-items">0</div>
+						</a>
+					</li>
+					<li>
+						<a href="/table.html" data-filters="New">
+							New
+							<div class="badge" id="new">0</div>
+						</a>
+					</li>
+					<li>
+						<a href="/table.html">In work</a>
+					</li>
+					<li>
+						<a href="/table.html">Completed</a>
+					</li>
+					<li>
+						<a href="/table.html">Archive</a>
+					</li>
+				</ul>
+			</div>
+			<div class="left-panel__navigation">
+				<div class="left-panel__navigation-title">Products</div>
+				<ul>
+					<li><a href="#">Active</a></li>
+					<li><a href="#">Archive</a></li>
+				</ul>
+			</div>
+			<div class="left-panel__navigation left-panel__navigation--no-line">
+				<ul>
+					<li><a href="#">Exit</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-wrapper">
+			<div class="container-fluid">
+				<div class="row justify-content-between align-items-center">
+					<div class="col">
+						<div class="admin-heading-1">Working with an bid</div>
+					</div>
+					<div class="col text-right">
+						<a href="index.html" class="btn btn-link">Come back</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<form action="">
+							<div class="card mb-4">
+								<div class="card-header">Bid data</div>
+								<div class="card-body">
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>ID:</strong>
+										</div>
+										<div class="col" id="id-order">
+											Bid №
+											<span data-edit-id></span>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Date of creation:</strong>
+										</div>
+										<div class="col col-date" id="date-order"></div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Product:</strong>
+										</div>
+										<div class="col">
+											<select class="custom-select" id="edit-select">
+												<option value="HTML Course">HTML Course</option>
+												<option value="JavaScript Course">JavaScript Course</option>
+												<option value="VUE JS Course">VUE JS Course</option>
+												<option value="PHP Course">PHP Course</option>
+												<option value="WordPress Course">WordPress Course</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Name:</strong>
+										</div>
+										<div class="col">
+											<input id="name-order" type="text" class="form-control" value="" />
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Email:</strong>
+										</div>
+										<div class="col">
+											<input id="email-order" type="text" class="form-control" value="" />
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Phone:</strong>
+										</div>
+										<div class="col">
+											<input id="phone-order" type="text" class="form-control" value="" />
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-md-2">
+											<strong>Bid status:</strong>
+										</div>
+										<div class="col">
+											<select class="custom-select" id="status-order">
+												<option selected="">Select...</option>
+												<option value="New">New</option>
+												<option value="In work">In work</option>
+												<option value="Payment expected">Payment expected</option>
+												<option value="Completed">Completed</option>
+												<option value="Failure">Failure</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-between">
+								<div class="col">
+									<a href="/table.html" type="button" class="btn btn-primary" id="save-changes"
+										>Save Changes</a
+									>
+								</div>
+								<div class="col text-right">
+									<a href="/table.html" type="button" class="btn btn-dark" data-archive
+										>Delete to Archive</a
+									>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/model.js"></script>
+
+		<script src="./js/edit/edit.view.js"></script>
+		<script src="./js/edit/edit.controller.js"></script>
+	</body>
+</html>

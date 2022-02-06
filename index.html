@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>01 - Form</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+</head>
+
+<body class="with-nav radial-bg flex-center">
+	<nav class="project-nav">
+		<div class="project-nav__links-wrapper">
+			<a href="index.html">Form for adding bids</a>
+			<a href="table.html">Bids table</a>
+			<a href="edit.html">Editing an bids</a>
+		</div>
+	</nav>
+	<div class="white-plate white-plate--payment">
+		<div class="container-fluid">
+			<div class="white-plate__header text-center">
+				<p class="white-plate__logo">
+					<span>Form</span> bids
+				</p>
+			</div>
+			<div class="white-plate__line-between white-plate__line-between--main"></div>
+
+			<form method="POST" id="addForm" action="<?=HOST?>payment-form.php">
+				<label>Your data:</label>
+				<div class="form-group">
+					<input type="text" id="input__name" name="name" autocomplete="on" class="form-control" placeholder="First and last name" required>
+				</div>
+				<div class="form-group">
+					<input type="text" id="input__phone" minlength="10" name="phone" autocomplete="on" class="form-control" placeholder="Phone" required>
+				</div>
+				<div class="form-group">
+					<input type="email" id="input__email" name="email" autocomplete="on" class="form-control" placeholder="Email" required>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect1">Product:</label>
+					<select name="product" class="form-control" id="index-select">
+						<option value="HTML Course">HTML Course</option>
+						<option value="JavaScript Course">JavaScript Course</option>
+						<option value="VUE JS Course">VUE JS Course</option>
+						<option value="PHP Course">PHP Course</option>
+						<option value="WordPress Course">WordPress Course</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary btn-block">Make a request</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+	<script src="js/form/form.test-data.js"></script>
+	<script src="./js/model.js"></script>
+
+	<script src="./js/form/form.view.js"></script>
+	<script src="./js/form/form.controller.js"></script>
+</body>
+</html>
